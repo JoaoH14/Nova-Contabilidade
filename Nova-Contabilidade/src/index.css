@@ -1,0 +1,94 @@
+/* VARIÁVEIS GLOBAIS */
+:root {
+    --cor-primaria: #036D19;
+    --cor-fundo: #eaf0e8;
+    --outro-branco: #F9FFF2;
+    --fonte-titulo: "Unbounded";
+    --fonte-texto: "Alexandria";
+
+    --radius-btn: 1.5vw;
+    --radius-nav: 5vw;
+    --radius-card: 3vw;
+    --radius-input: 1vw;
+
+    --shadow-suave: 0 4px 5px 0 rgba(0, 0, 0, 0.20);
+    --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.1);
+    --blur-vidro: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-titulo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+p {
+    font-family: var(--fonte-texto);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: fit-content;
+    cursor: pointer;
+    border: 0;
+    background: none;
+    font-family: var(--fonte-titulo);
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+#depoimentos {
+    scroll-margin-top: 40px;
+}
+
+#facaparte {
+    scroll-margin-top: 120px;
+}

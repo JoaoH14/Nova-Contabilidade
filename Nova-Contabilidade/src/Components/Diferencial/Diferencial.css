@@ -1,0 +1,104 @@
+.Diferencial {
+    background: none;
+    overflow: visible;
+    height: 100vh;
+    justify-content: center;
+    margin-top: 400px;
+    margin-bottom: 400px;
+    position: relative;
+
+
+    --t: clamp(0, calc((1440px - 140vw) / 1120px), 1);
+
+    --depo-rot: calc(var(--t) * -70deg);
+
+    --depo-scale: calc(1 + var(--t)*2);
+
+    .tituloD {
+        text-align: center;
+        gap: 16px;
+
+
+        h2 {
+            font-size: clamp(20px, 4vw, 32px);
+            font-weight: 400;
+        }
+
+        p {
+            font-size: clamp(15px, 2vw, 20px);
+            font-weight: 400;
+            opacity: 0.8;
+        }
+    }
+}
+
+.cardmetodos {
+    margin: 50px;
+    padding: 3% 5%;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+    .metodos {
+        width: 408px;
+        background: rgba(228, 228, 228, 0.4);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: var(--radius-card);
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 40px 40px 40px 25px;
+        align-items: flex-start;
+
+
+        .tituloCard {
+            font-family: var(--fonte-texto);
+            font-weight: 200;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 13px;
+
+
+            h3 {
+                font-size: clamp(23px, 4vw, 32px);
+                font-weight: 400;
+            }
+        }
+
+        ul {
+            align-items: flex-start;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--cor-primaria);
+            font-size: 1.4em;
+            margin-right: 8px;
+        }
+    }
+}
+
+.Diferencial::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/seta.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+
+    transform-origin: center;
+    transform: rotate(var(--depo-rot)) scale(var(--depo-scale));
+    transition: transform 0.2s ease;
+}
