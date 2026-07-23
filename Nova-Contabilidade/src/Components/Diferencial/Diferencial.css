@@ -43,9 +43,9 @@
 
     .metodos {
         width: 408px;
-        background: rgba(228, 228, 228, 0.4);
+        background: var(--fundo-vidro);
         backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.4);
+        border: 1px solid var(--borda-vidro);
         border-radius: var(--radius-card);
         display: flex;
         flex-direction: column;
@@ -68,6 +68,19 @@
                 font-size: clamp(23px, 4vw, 32px);
                 font-weight: 400;
             }
+
+            .icone-ampulheta {
+                color: var(--cor-texto);
+                width: 19px;
+                height: 26px;
+            }
+
+            .icone-setavetor {
+                color: var(--cor-texto);
+                width: 23px;
+                height: 23px;
+            }
+
         }
 
         ul {

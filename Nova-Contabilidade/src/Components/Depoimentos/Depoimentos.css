@@ -23,7 +23,7 @@
         gap: 15px;
         flex-shrink: 1;
         min-width: 0;
-        background: linear-gradient(180deg, #000 27.8%, rgba(102, 102, 102, 0.00) 180.82%);
+        background: linear-gradient(180deg, var(--cor-texto) 27.8%, rgba(102, 102, 102, 0.00) 180.82%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

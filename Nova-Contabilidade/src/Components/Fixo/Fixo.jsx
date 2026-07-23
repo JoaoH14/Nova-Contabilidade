@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Fixo.css';
 import Logo from '../../assets/Vector.svg';
 
 export function Fixo() {
     const [menuAberto, setMenuAberto] = useState(false);
-    const [modoEscuroAtivo, setModoEscuroAtivo] = useState(false);
+
+    // NOVO: inicializa lendo a preferência salva (se existir)
+    const [modoEscuroAtivo, setModoEscuroAtivo] = useState(() => {
+        return localStorage.getItem('tema') === 'escuro';
+    });
 
     function handleClick() {
         setMenuAberto((atual) => !atual);
@@ -13,6 +17,12 @@ export function Fixo() {
     function handleModoEscuro() {
         setModoEscuroAtivo((atual) => !atual);
     }
+
+    // NOVO: sempre que modoEscuroAtivo mudar, aplica/remove a classe no <html>
+    useEffect(() => {
+        document.documentElement.classList.toggle('dark-mode', modoEscuroAtivo);
+        localStorage.setItem('tema', modoEscuroAtivo ? 'escuro' : 'claro');
+    }, [modoEscuroAtivo]);
 
     return (
         <>

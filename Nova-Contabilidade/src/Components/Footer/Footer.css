@@ -22,7 +22,7 @@ footer {
     }
 
     .texto {
-        color: var(--cor-fundo);
+        color: #eaf0e8;
         font-size: clamp(10px, 1.5vw, 15px);
         padding: 100px 3vw 0 3vw;
         gap: 10vw;

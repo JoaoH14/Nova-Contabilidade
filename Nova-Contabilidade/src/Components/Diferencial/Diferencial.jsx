@@ -1,7 +1,6 @@
 import './Diferencial.css';
 import Seta from '../../assets/seta.png';
-import Ampulheta from '../../assets/ampulheta.svg';
-import SetaVetor from '../../assets/setavetor.svg';
+import { IconeAmpulheta, IconeSetaVetor } from './Icones.jsx';
 
 export function Diferencial() {
     return (
@@ -14,7 +13,7 @@ export function Diferencial() {
                 <div className="cardmetodos">
                     <div className="metodos">
                         <div className="tituloCard">
-                            <img src={Ampulheta} alt="" />
+                            <IconeAmpulheta className="icone-ampulheta" />
                             <h3>O Passado</h3>
                         </div>
                         <ul>
@@ -29,7 +28,7 @@ export function Diferencial() {
                     </div>
                     <div className="metodos">
                         <div className="tituloCard">
-                            <img src={SetaVetor} alt="" />
+                            <IconeSetaVetor className="icone-setavetor" />
                             <h3>A Nova maneira</h3>
                         </div>
                         <ul>

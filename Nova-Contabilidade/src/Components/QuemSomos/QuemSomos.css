@@ -1,14 +1,36 @@
+/* FADE IN NO SCROLL */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* variante pra elementos que já usam transform pra centralizar (txt1..txt6) */
+@keyframes fadeInUpCentralizado {
+    from {
+        opacity: 0;
+        transform: translate(-50%, calc(-50% + 30px));
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
 /* QUEM SOMOS */
 .Quemsomos {
     padding-top: 150px;
     position: relative;
     z-index: 1;
 
-
     .tituloQS {
         text-align: center;
         gap: 16px;
-
 
         h2 {
             font-size: clamp(25px, 4vw, 32px);
@@ -36,7 +58,6 @@
     align-items: stretch;
     justify-content: space-between;
 
-
     .qscard {
         flex: 1;
         min-width: 0;
@@ -48,7 +69,7 @@
         -webkit-backdrop-filter: blur(var(--blur-vidro));
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: var(--shadow-card);
-
+        opacity: 1; /* fallback: garante visível em navegadores sem suporte */
 
         .numero {
             display: block;
@@ -57,6 +78,7 @@
             font-weight: 400;
             margin-top: 2vw;
             margin-bottom: 2vw;
+            color: black;
         }
 
         h3 {
@@ -64,6 +86,7 @@
             font-size: clamp(13px, 2vw, 32px);
             font-weight: 400;
             margin-bottom: 2vw;
+            color: black;
         }
 
         p {
@@ -71,7 +94,26 @@
             font-weight: 400;
             line-height: 1.6;
             letter-spacing: 0.65px;
+            color: black;
         }
+    }
+}
+
+/* aplica o fade-in nos cards, só se o navegador suportar */
+@supports (animation-timeline: view()) {
+    .QScards .qscard {
+        animation: fadeInUp 0.8s ease-out both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 50%;
+    }
+
+    /* cascata: cada card aparece um pouquinho depois do anterior */
+    .QScards .qscard:nth-child(2) {
+        animation-range: entry 10% entry 60%;
+    }
+
+    .QScards .qscard:nth-child(3) {
+        animation-range: entry 20% entry 70%;
     }
 }
 
@@ -84,7 +126,6 @@
     padding-top: 90%;
     width: 100%;
     position: relative;
-
 
     p {
         font-family: var(--fonte-titulo);
@@ -109,32 +150,14 @@
         transform: translate(-50%, -50%);
         text-align: center;
         font-size: clamp(10px, 2.2vw, 27px);
+        opacity: 1; /* fallback */
     }
 
-    .txt1 {
-        top: 17%;
-        left: 19%;
-    }
-
-    .txt2 {
-        top: 12%;
-        left: 74.5%;
-    }
-
-    .txt3 {
-        top: 41%;
-        left: 50%;
-    }
-
-    .txt4 {
-        top: 58%;
-        left: 19%;
-    }
-
-    .txt51 {
-        top: 83%;
-        left: 16%;
-    }
+    .txt1 { top: 17%; left: 19%; }
+    .txt2 { top: 12%; left: 74.5%; }
+    .txt3 { top: 41%; left: 50%; }
+    .txt4 { top: 58%; left: 19%; }
+    .txt51 { top: 83%; left: 16%; }
 
     .txt52 {
         top: 93%;
@@ -150,6 +173,20 @@
     }
 }
 
+/* aplica o fade-in nos textos do LogoG, usando a variante centralizada */
+@supports (animation-timeline: view()) {
+    .LogoG .txt1,
+    .LogoG .txt2,
+    .LogoG .txt3,
+    .LogoG .txt4,
+    .LogoG .txt51,
+    .LogoG .txt52,
+    .LogoG .txt6 {
+        animation: fadeInUpCentralizado 0.8s ease-out both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 50%;
+    }
+}
 
 @media (max-width: 600px) {
     /* QUEM SOMOS */
@@ -163,7 +200,6 @@
         flex-direction: column;
         gap: 10vw;
     }
-
 
     .LogoG {
         background-image: url('../../assets/LogoG-Mobile.png');
@@ -183,30 +219,11 @@
             font-size: clamp(10px, 4vw, 15px);
         }
 
-        .txt1 {
-            top: 9%;
-            left: 27%;
-        }
-
-        .txt2 {
-            top: 25%;
-            left: 77%;
-        }
-
-        .txt3 {
-            top: 46%;
-            left: 68%;
-        }
-
-        .txt4 {
-            top: 38%;
-            left: 27%;
-        }
-
-        .txt51 {
-            top: 55.5%;
-            left: 27%;
-        }
+        .txt1 { top: 9%; left: 27%; }
+        .txt2 { top: 25%; left: 77%; }
+        .txt3 { top: 46%; left: 68%; }
+        .txt4 { top: 38%; left: 27%; }
+        .txt51 { top: 55.5%; left: 27%; }
 
         .txt52 {
             top: 61%;

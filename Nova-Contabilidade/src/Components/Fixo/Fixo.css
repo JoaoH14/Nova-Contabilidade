@@ -158,7 +158,7 @@ header {
 }
 
 .modoescuro.ativo rect {
-    fill: var(--cor-fundo);
+    fill: #eaf0e8;
 }
 
 .modoescuro.ativo circle {

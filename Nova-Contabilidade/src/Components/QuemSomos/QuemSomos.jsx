@@ -2,6 +2,7 @@ import './QuemSomos.css';
 import FundoCards from '../../assets/FundoCards.png';
 import FundoLogo from '../../assets/fundologo.png';
 import FundoLogoMobile from '../../assets/LogoG-Mobile.png';
+import { NumeroAnimado } from './NumeroAnimado.jsx';
 
 
 
@@ -38,19 +39,19 @@ export function QuemSomos() {
 
             <section className="LogoG" aria-label="Números da Nova">
                 <div className="txt1">
-                    <p><span>+450</span> <br /> Empresas <br /> Atendidas</p>
+                    <p><NumeroAnimado valorFinal={450} prefixo="+" /> <br /> Empresas <br /> Atendidas</p>
                 </div>
                 <div className="txt2">
-                    <p><span>+R$ 8</span> <br /> Milhões <br /> Gerenciados</p>
+                    <p><NumeroAnimado valorFinal={8} prefixo="+R$ " /> <br /> Milhões <br /> Gerenciados</p>
                 </div>
                 <div className="txt3">
-                    <p>Atendimento <br /> <span>100%</span> <br /> Digital</p>
+                    <p>Atendimento <br /> <NumeroAnimado valorFinal={100} sufixo="%" /> <br /> Digital</p>
                 </div>
                 <div className="txt4">
-                    <p><span>+12</span> <br /> Anos de <br /> Experiência</p>
+                    <p><NumeroAnimado valorFinal={12} prefixo="+" /> <br /> Anos de <br /> Experiência</p>
                 </div>
                 <div className="txt51">
-                    <p><span>85%</span></p>
+                    <p><NumeroAnimado valorFinal={85} sufixo="%" /></p>
                 </div>
                 <div className="txt52">
                     <p>de Processos <br />Automatizados</p>

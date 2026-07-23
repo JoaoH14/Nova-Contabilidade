@@ -2,7 +2,7 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    gap: 1vw;
+    gap: 2vw;
     overflow: visible;
     position: relative;
 
@@ -19,7 +19,7 @@
             font-family: var(--fonte-titulo);
             font-size: clamp(10px, 1.5vw, 15px);
             font-weight: 300;
-            color: #000;
+            color: var(--cor-texto);
             opacity: 0.8;
         }
 
