@@ -69,7 +69,7 @@ header {
     .modoescuro {
         position: fixed;
         bottom: 12px;
-        right: 24px;
+        right: 30px;
         z-index: 99;
         padding: 0;
         background: none;

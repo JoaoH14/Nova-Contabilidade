@@ -16,6 +16,8 @@
 
     .depoimentos {
         width: 55vw;
+        height: 300px;
+        justify-content: center;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -37,7 +39,7 @@
         p {
             text-align: center;
             font-family: var(--fonte-texto);
-            font-size: 24px;
+            font-size: clamp(15px, 3.5vw, 30px);
             font-weight: 300;
         }
 
