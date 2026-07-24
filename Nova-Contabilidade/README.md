@@ -1,4 +1,4 @@
-<h1>Nova | Acessoria Contábil</h1>
+<h1>Nova | Assessoria Contábil</h1>
 
 > O projeto se trata de uma landing page feita em React Js, criada com o intuito de aprendizado e prática dessas ferramentas.
 
