@@ -1,27 +1,3 @@
-/* FADE IN NO SCROLL */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* variante pra elementos que já usam transform pra centralizar (txt1..txt6) */
-@keyframes fadeInUpCentralizado {
-    from {
-        opacity: 0;
-        transform: translate(-50%, calc(-50% + 30px));
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-}
-
 /* QUEM SOMOS */
 .Quemsomos {
     padding-top: 150px;
@@ -69,7 +45,7 @@
         -webkit-backdrop-filter: blur(var(--blur-vidro));
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: var(--shadow-card);
-        opacity: 1; /* fallback: garante visível em navegadores sem suporte */
+        opacity: 1;
 
         .numero {
             display: block;
@@ -99,23 +75,6 @@
     }
 }
 
-/* aplica o fade-in nos cards, só se o navegador suportar */
-@supports (animation-timeline: view()) {
-    .QScards .qscard {
-        animation: fadeInUp 0.8s ease-out both;
-        animation-timeline: view();
-        animation-range: entry 0% entry 50%;
-    }
-
-    /* cascata: cada card aparece um pouquinho depois do anterior */
-    .QScards .qscard:nth-child(2) {
-        animation-range: entry 10% entry 60%;
-    }
-
-    .QScards .qscard:nth-child(3) {
-        animation-range: entry 20% entry 70%;
-    }
-}
 
 .LogoG {
     margin-top: 100px;
@@ -150,7 +109,7 @@
         transform: translate(-50%, -50%);
         text-align: center;
         font-size: clamp(10px, 2.2vw, 27px);
-        opacity: 1; /* fallback */
+        opacity: 1;
     }
 
     .txt1 { top: 17%; left: 19%; }
@@ -173,20 +132,6 @@
     }
 }
 
-/* aplica o fade-in nos textos do LogoG, usando a variante centralizada */
-@supports (animation-timeline: view()) {
-    .LogoG .txt1,
-    .LogoG .txt2,
-    .LogoG .txt3,
-    .LogoG .txt4,
-    .LogoG .txt51,
-    .LogoG .txt52,
-    .LogoG .txt6 {
-        animation: fadeInUpCentralizado 0.8s ease-out both;
-        animation-timeline: view();
-        animation-range: entry 0% entry 50%;
-    }
-}
 
 @media (max-width: 600px) {
     /* QUEM SOMOS */
