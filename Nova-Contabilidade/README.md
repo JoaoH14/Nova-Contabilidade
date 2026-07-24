@@ -1,16 +1,32 @@
-# React + Vite
+<h1>Nova | Acessoria Contábil</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> O projeto se trata de uma landing page feita em React Js, criada com o intuito de aprendizado e prática dessas ferramentas.
 
-Currently, two official plugins are available:
+[![Acesse o site]](https://nova-contabilidade.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Estrutura
 
-## React Compiler
+## src/
+Código fonte de todo o site.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### assets/
+Arquivo com todas as imagens/ícones utilizados.
 
-## Expanding the Oxlint configuration
+### Components/
+Pasta com toda a componentização das partes do site, tanto em jsx quanto em css.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### App.jsx
+Aqui acontece toda a junção dos componentes da pasta Components, formando a estrutura do site.
+
+## index.css
+Estilização da página como um todo.
+
+## main.jsx
+Ponto de entrada do site.
+
+##
+
+<h4>Entre em contato comigo</h4>
+
+[![Linkedin]](https://www.linkedin.com/in/jo%C3%A3o-henrique-da-rosa-7878562b9/)
+[![Gmail]](mailto:joaohrosa14@gmail.com)
