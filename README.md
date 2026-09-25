@@ -2,7 +2,7 @@
 
 > O projeto se trata de uma landing page feita em React Js, criada com o intuito de aprendizado e prática dessas ferramentas.
 
-[![Acesse o site]]([(https://novacontabilidade.vercel.app/)](https://novacontabilidade.vercel.app/))
+[![Acesse o site]](https://novacontabilidade.vercel.app/)
 
 # Estrutura
 
